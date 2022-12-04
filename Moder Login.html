@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --pcolor:#2e86de;
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: var(--pcolor);
+        }
+        .container{
+            width: 200px;
+            padding: 30px 20px;
+            background-color: white;       }
+       .lc{
+        width: 7px;
+        height: 12px;
+        background-color: var(--pcolor);
+        display: block;
+       }
+       h2{
+        font-size: medium;
+        padding: 10px 0px;
+        }
+        input{
+            margin: 6px 0px;
+            width: 100%;
+            height: 25px;
+            outline: none;
+
+        }
+        input input{
+            color: black;
+        }
+        ::placeholder{
+            text-align: center;     
+            color: black;       
+        }
+        input[type=submit]{
+            background-color: var(--pcolor);
+            color: white;
+            border-radius: 0%;
+            outline: none;
+            border: none;
+        }
+        .forpas{
+            font-size: small;
+            display: flex;
+            justify-content: space-between;
+           
+        }
+        .colors{
+            position: absolute;
+            top: 10%;
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-radius: 30px;
+        }
+        .pcolor{
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            border-radius: 25px;
+            margin: 5px;
+            cursor: pointer;
+            
+        }
+        #grn{
+            background-color: #1dd1a1;
+        }
+        #red{
+            background-color: #ff6b6b;
+        }
+        #bl{
+            background-color: #3087df; 
+        }
+        #pnk{
+            background-color: #f368e0;
+        }
+        #org{
+            background-color: #ff9f43;
+        }
+        .forpas:hover{
+            text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <span class="lc" id="lc"></span><h2>Login</h2>
+        <form>
+        <input type="text" placeholder="Username" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <input type="submit" value="Submit" id="btn"><br>
+        </form>
+        <span class="forpas" id="fs">Forgot Password</pan>
+        <span class="forpas">Signup</span>
+    </div>
+    <div class="colors" id="clr">
+
+        <span class="pcolor" id="bl" onclick="colorchange('#3087df')"></span>
+
+        <span class="pcolor" id="pnk" onclick="colorchange('#f368e0')"></span>
+
+        <span class="pcolor" id="grn" onclick="colorchange('#1dd1a1')"></span>
+
+        <span class="pcolor" id="red" onclick="colorchange('#ff6b6b')"></span>
+
+        <span class="pcolor" id="org" onclick="colorchange('#ff9f43')"></span>
+        </div>
+</body>
+<script>
+let bdclr=document.getElementsByClassName(body)
+let submit = documnet.querySelectorAll('input[type=submit')
+function colorchange(c){  
+    document.querySelector('.lc').style.background=c;
+    document.querySelector('body').style.background=c;
+    document.querySelector('input[type=submit').style.background=c;
+    
+}
+</script>
+</html>
